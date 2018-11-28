@@ -10,7 +10,7 @@ package sdlcstudy;
  * @author justin
  */
 public class MainForm extends javax.swing.JFrame {
-
+private QuizForm quiz;
     /**
      * Creates new form MainForm
      */

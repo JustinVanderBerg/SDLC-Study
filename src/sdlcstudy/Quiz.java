@@ -16,5 +16,6 @@ public class Quiz {
      * Default constructor
      */
     public Quiz(){
+        
     }
 }
