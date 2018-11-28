@@ -8,6 +8,7 @@ package sdlcstudy;
 /**
  *
  * @author justin
+ * Added some test comments
  */
 public class Quiz {
     
