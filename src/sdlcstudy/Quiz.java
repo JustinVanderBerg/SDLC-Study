@@ -6,6 +6,7 @@
 package sdlcstudy;
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Quiz {
     private String[] answers;
     private int[] correctAnswers;
     private int numQuestions;
+
     /**
      * Default constructor
      */
@@ -30,19 +32,29 @@ public class Quiz {
 
     private void readFile() {
         try {
-            FileReader fr = new FileReader("src\\sdlcstudy\\Quiz.txt");
+            int numRead = 0;
+            FileReader fr = new FileReader("src//sdlcstudy//Quiz.txt");
             BufferedReader br = new BufferedReader(fr);
             numQuestions = Integer.parseInt(br.readLine());
-            
+            questions = new String[numQuestions];
+            answers = new String[numQuestions * 4];
+            correctAnswers = new int[numQuestions];
             for (int i = 0; i < numQuestions; i++) {
                 questions[i] = br.readLine();
-                for (int j = 0; j < 4; j++) {
+                for (int j = numRead * 4; j < (numRead * 4) + 4; j++) {
                     answers[j] = br.readLine();
                 }
                 correctAnswers[i] = Integer.parseInt(br.readLine());
+                numRead++;
             }
         } catch (IOException e) {
             System.out.println("Error: " + e);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Quiz{" + "\n questions=" + Arrays.toString(questions) + "\n answers=" + Arrays.toString(answers) + "\n correctAnswers=" + Arrays.toString(correctAnswers) + "\n numQuestions=" + numQuestions + "\n}";
+    }
+
 }

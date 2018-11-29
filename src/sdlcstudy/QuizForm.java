@@ -12,6 +12,8 @@ package sdlcstudy;
 public class QuizForm extends javax.swing.JFrame {
 
     MainForm mainScreen;
+    //Quiz object that stores info on the quiz
+    Quiz quiz;
 
     /**
      * Creates a new quiz form
@@ -21,6 +23,7 @@ public class QuizForm extends javax.swing.JFrame {
     public QuizForm(MainForm m) {
         initComponents();
         mainScreen = m;
+        quiz = new Quiz();
     }
 
     /**
@@ -43,6 +46,7 @@ public class QuizForm extends javax.swing.JFrame {
         lblC = new javax.swing.JLabel();
         lblD = new javax.swing.JLabel();
         lblQuestion = new javax.swing.JLabel();
+        btnSubmit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +74,13 @@ public class QuizForm extends javax.swing.JFrame {
 
         lblD.setText("D.");
 
+        btnSubmit.setText("Submit Answer");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,7 +89,8 @@ public class QuizForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 319, Short.MAX_VALUE)
+                        .addComponent(btnSubmit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
                         .addComponent(btnMain))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +133,9 @@ public class QuizForm extends javax.swing.JFrame {
                         .addComponent(jBtnOption4))
                     .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(65, 65, 65)
-                .addComponent(btnMain)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMain)
+                    .addComponent(btnSubmit))
                 .addContainerGap())
         );
 
@@ -136,10 +150,16 @@ public class QuizForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnMainActionPerformed
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupOptions;
     private javax.swing.JButton btnMain;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.JRadioButton jBtnOption1;
     private javax.swing.JRadioButton jBtnOption2;
     private javax.swing.JRadioButton jBtnOption3;
