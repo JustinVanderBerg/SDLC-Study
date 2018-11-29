@@ -10,9 +10,13 @@ package sdlcstudy;
  * @author justin
  */
 public class QuizForm extends javax.swing.JFrame {
-MainForm mainScreen;
+
+    MainForm mainScreen;
+
     /**
-     * Creates new form QuizForm
+     * Creates a new quiz form
+     *
+     * @param m Main form so we can switch visible frames
      */
     public QuizForm(MainForm m) {
         initComponents();
@@ -28,7 +32,17 @@ MainForm mainScreen;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnGroupOptions = new javax.swing.ButtonGroup();
         btnMain = new javax.swing.JButton();
+        jBtnOption1 = new javax.swing.JRadioButton();
+        jBtnOption2 = new javax.swing.JRadioButton();
+        jBtnOption3 = new javax.swing.JRadioButton();
+        jBtnOption4 = new javax.swing.JRadioButton();
+        lblA = new javax.swing.JLabel();
+        lblB = new javax.swing.JLabel();
+        lblC = new javax.swing.JLabel();
+        lblD = new javax.swing.JLabel();
+        lblQuestion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,19 +53,74 @@ MainForm mainScreen;
             }
         });
 
+        btnGroupOptions.add(jBtnOption1);
+        jBtnOption1.setSelected(true);
+
+        btnGroupOptions.add(jBtnOption2);
+
+        btnGroupOptions.add(jBtnOption3);
+
+        btnGroupOptions.add(jBtnOption4);
+
+        lblA.setText("A.");
+
+        lblB.setText("B.");
+
+        lblC.setText("C.");
+
+        lblD.setText("D.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(272, Short.MAX_VALUE)
-                .addComponent(btnMain)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 319, Short.MAX_VALUE)
+                        .addComponent(btnMain))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblA)
+                                    .addComponent(lblB)
+                                    .addComponent(lblC)
+                                    .addComponent(lblD))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jBtnOption1)
+                                    .addComponent(jBtnOption2)
+                                    .addComponent(jBtnOption3)
+                                    .addComponent(jBtnOption4)))
+                            .addComponent(lblQuestion))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(249, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(lblQuestion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBtnOption1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblA, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jBtnOption2)
+                            .addComponent(lblB))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jBtnOption3)
+                            .addComponent(lblC))
+                        .addGap(21, 21, 21)
+                        .addComponent(jBtnOption4))
+                    .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(65, 65, 65)
                 .addComponent(btnMain)
                 .addContainerGap())
         );
@@ -64,12 +133,21 @@ MainForm mainScreen;
         this.setVisible(false);
         //set the main screen form visible
         mainScreen.setVisible(true);
-        
+
     }//GEN-LAST:event_btnMainActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btnGroupOptions;
     private javax.swing.JButton btnMain;
+    private javax.swing.JRadioButton jBtnOption1;
+    private javax.swing.JRadioButton jBtnOption2;
+    private javax.swing.JRadioButton jBtnOption3;
+    private javax.swing.JRadioButton jBtnOption4;
+    private javax.swing.JLabel lblA;
+    private javax.swing.JLabel lblB;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblD;
+    private javax.swing.JLabel lblQuestion;
     // End of variables declaration//GEN-END:variables
 }

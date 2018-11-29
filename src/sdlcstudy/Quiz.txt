@@ -1,0 +1,19 @@
+3
+What does SDLC stand for?
+Software Development Life Continuum
+Super Difficult Letter Curriculum
+Software Development Life Cycle
+Software's Degenerative Life Cycle
+3
+What is a system(in terms of the SDLC)?
+The use of software to provide a solution to a buisness problem
+The use of hardware to provide a solution to a buisness problem
+An organized way of solving a problem
+All of the Above
+4
+How do you measure the success of a system?
+Both B and C
+By the scalability of the project
+By the time it take to complete the project
+By the amount of profit generated from the project
+1
