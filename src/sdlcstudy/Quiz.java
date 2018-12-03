@@ -52,6 +52,37 @@ public class Quiz {
         }
     }
 
+    /**
+     *
+     * @param i index of question you want
+     * @return question at index i
+     */
+    public String getQuestion(int i) {
+        return questions[i];
+    }
+
+    /**
+     *
+     * @param i index of the answer you want
+     * @return A string of answers to question number "i"
+     */
+    public String[] getAnswers(int i) {
+        String[] tArr = new String[4];
+        for (int j = 0; j < 4; j++) {
+            tArr[j] = answers[(i * 4) + j];
+        }
+        return tArr;
+    }
+
+    /**
+     *
+     * @param i index of the answer you want
+     * @return number of the correct answer to question number "i"
+     */
+    public int getCorrectAnswer(int i) {
+        return correctAnswers[i];
+    }
+
     @Override
     public String toString() {
         return "Quiz{" + "\n questions=" + Arrays.toString(questions) + "\n answers=" + Arrays.toString(answers) + "\n correctAnswers=" + Arrays.toString(correctAnswers) + "\n numQuestions=" + numQuestions + "\n}";

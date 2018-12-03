@@ -12,7 +12,7 @@ package sdlcstudy;
 public class StudyForm extends javax.swing.JFrame {
 
     MainForm mainScreen;
-
+    Quiz quiz;
     /**
      * Creates new form StudyForm
      */
