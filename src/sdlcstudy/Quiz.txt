@@ -1,0 +1,61 @@
+10
+What does SDLC stand for?
+Software Development Life Continuum
+Super Difficult Letter Curriculum
+Software Development Life Cycle
+Software's Degenerative Life Cycle
+3
+What is a system(in terms of the SDLC)?
+The use of software to provide a solution to a buisness problem
+The use of hardware to provide a solution to a buisness problem
+An organized way of solving a problem
+All of the Above
+4
+How do you measure the success of a system?
+Both B and C
+By the scalability of the project
+By the time it take to complete the project
+By the amount of profit generated from the project
+1
+What is one model of following the Software Development Life Cycle?
+Waterfall Model
+River Model
+Construction Model
+Movie Model
+1
+Who developed the Waterfall Model?
+Steve Jobs
+Bill Gates
+Dr. Winston Royce
+Donald Trump
+3
+Which is not a phase of the waterfall model?
+Problem Statement
+Design
+Implementation
+Replication
+4
+What is the 2nd step in the Waterfall model?
+Implementation
+Analysis
+Testing
+Deployment & Maintenance
+2
+In what phase of the Waterfall Model is a mistake the most costly to fix?
+Analysis
+Design
+Maintenance
+Integration
+3
+Which phase costs the most money in the Waterfall Model?
+Maintenance
+Design
+Implementation
+Integration
+1
+What is a Gantt chart?
+A spreadsheat showing important dates
+A simple to-do list
+A tool best used to organize small projects
+A visual representation of the production schedule
+4

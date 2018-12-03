@@ -11,6 +11,9 @@ package sdlcstudy;
  */
 public class MainForm extends javax.swing.JFrame {
 
+    private QuizForm quiz;
+    private StudyForm study;
+
     /**
      * Creates new form MainForm
      */
@@ -27,21 +30,89 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnQuiz = new javax.swing.JButton();
+        btnStudy = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnQuiz.setText("Quiz");
+        btnQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuizActionPerformed(evt);
+            }
+        });
+
+        btnStudy.setText("Study");
+        btnStudy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStudyActionPerformed(evt);
+            }
+        });
+
+        lblTitle.setFont(new java.awt.Font("Pagul", 1, 24)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Software Development Life Cycle Test Preperation");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnStudy)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnQuiz)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(81, 81, 81))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 379, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnQuiz)
+                    .addComponent(btnStudy))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuizActionPerformed
+        //Check if we have already created a quiz form,
+        //if we haven't, make a new instance of the quiz form
+
+        if (quiz == null) {
+            quiz = new QuizForm(this);
+        }
+
+        //set other window visable
+        quiz.setVisible(true);
+
+        //set this window to not visible
+        this.setVisible(false);
+    }//GEN-LAST:event_btnQuizActionPerformed
+
+    private void btnStudyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudyActionPerformed
+        //Check if we have already created a study form,
+        //if we haven't, make a new instance of the study form
+
+        if (study == null) {
+            study = new StudyForm(this);
+        }
+
+        //set other window visable
+        study.setVisible(true);
+
+        //set this window to not visible
+        this.setVisible(false);
+    }//GEN-LAST:event_btnStudyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +150,8 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnQuiz;
+    private javax.swing.JButton btnStudy;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }
