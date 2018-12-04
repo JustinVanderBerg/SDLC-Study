@@ -37,9 +37,11 @@ public class Quiz {
      */
     private void readFile() {
         try {
+            //InputStream in = Quiz.class.getResourceAsStream("Quiz.txt");
             //number of files read
             int numRead = 0;
             //initialize files
+            //InputStreamReader fr = new InputStreamReader(in);
             FileReader fr = new FileReader("src//sdlcstudy//Quiz.txt");
             BufferedReader br = new BufferedReader(fr);
             numQuestions = Integer.parseInt(br.readLine());
