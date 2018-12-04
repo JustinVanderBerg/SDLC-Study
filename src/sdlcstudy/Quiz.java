@@ -7,6 +7,7 @@ package sdlcstudy;
 
 import java.io.*;
 import java.util.Arrays;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,15 +31,22 @@ public class Quiz {
         readFile();
     }
 
+    /**
+     * Reads in the quiz questions and answers and stores it in local data for
+     * quick access within the class
+     */
     private void readFile() {
         try {
+            //number of files read
             int numRead = 0;
+            //initialize files
             FileReader fr = new FileReader("src//sdlcstudy//Quiz.txt");
             BufferedReader br = new BufferedReader(fr);
             numQuestions = Integer.parseInt(br.readLine());
             questions = new String[numQuestions];
             answers = new String[numQuestions * 4];
             correctAnswers = new int[numQuestions];
+            //loop through the number of questions in the file
             for (int i = 0; i < numQuestions; i++) {
                 questions[i] = br.readLine();
                 for (int j = numRead * 4; j < (numRead * 4) + 4; j++) {
@@ -48,7 +56,7 @@ public class Quiz {
                 numRead++;
             }
         } catch (IOException e) {
-            System.out.println("Error: " + e);
+            JOptionPane.showMessageDialog(null, "ERROR: " + e);
         }
     }
 

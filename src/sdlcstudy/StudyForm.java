@@ -11,14 +11,17 @@ package sdlcstudy;
  */
 public class StudyForm extends javax.swing.JFrame {
 
-    MainForm mainScreen;
-    Quiz quiz;
+    private MainForm mainScreen;
+    private Study study;
+
     /**
      * Creates new form StudyForm
      */
     public StudyForm(MainForm m) {
         initComponents();
         mainScreen = m;
+        study = new Study();
+        txtDisplay.setText(study.getInfo(0));
     }
 
     /**
@@ -31,9 +34,13 @@ public class StudyForm extends javax.swing.JFrame {
     private void initComponents() {
 
         btnMain = new javax.swing.JButton();
+        cmbTopic = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtDisplay = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnMain.setFont(new java.awt.Font("Noto Sans", 0, 36)); // NOI18N
         btnMain.setText("Main Screen");
         btnMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,20 +48,47 @@ public class StudyForm extends javax.swing.JFrame {
             }
         });
 
+        cmbTopic.setFont(new java.awt.Font("Noto Sans", 0, 36)); // NOI18N
+        cmbTopic.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "System", "Measuring Success", "The Software Development Process", "The Waterfall Model", "Project Management Tools", "Gantt Chart", "UML" }));
+        cmbTopic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbTopicActionPerformed(evt);
+            }
+        });
+
+        txtDisplay.setEditable(false);
+        txtDisplay.setColumns(20);
+        txtDisplay.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        txtDisplay.setLineWrap(true);
+        txtDisplay.setRows(5);
+        txtDisplay.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtDisplay);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(272, Short.MAX_VALUE)
-                .addComponent(btnMain)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cmbTopic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(249, Short.MAX_VALUE)
-                .addComponent(btnMain)
+                .addContainerGap()
+                .addComponent(cmbTopic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnMain, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -68,8 +102,17 @@ public class StudyForm extends javax.swing.JFrame {
         mainScreen.setVisible(true);
     }//GEN-LAST:event_btnMainActionPerformed
 
+    private void cmbTopicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTopicActionPerformed
+        //When the selected element is changed
+        int index = cmbTopic.getSelectedIndex();
+        txtDisplay.setText(study.getInfo(index));
+    }//GEN-LAST:event_cmbTopicActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMain;
+    private javax.swing.JComboBox<String> cmbTopic;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtDisplay;
     // End of variables declaration//GEN-END:variables
 }
