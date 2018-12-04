@@ -221,6 +221,15 @@ public class QuizForm extends javax.swing.JFrame {
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
         //hide this form
         this.setVisible(false);
+        //reset this form so that on return everything is displayed from the start
+        numCorrect = 0;
+        numAnswered = 0;
+        currentQuestion = 0;
+        lblCorrect.setText("0");
+        lblAnswered.setText("0");
+        lblCorrectAnswer.setText("");
+        btnNext.setEnabled(false);
+        btnSubmit.setEnabled(true);
         //set the main screen form visible
         mainScreen.setVisible(true);
 

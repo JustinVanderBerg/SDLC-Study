@@ -93,6 +93,7 @@ public class MainForm extends javax.swing.JFrame {
         }
 
         //set other window visable
+        quiz.displayQuestion(0);
         quiz.setVisible(true);
 
         //set this window to not visible
