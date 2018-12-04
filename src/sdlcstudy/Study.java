@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Justin VanderBerg and Lauren Thomas
+ * December 4, 2018
+ * This is a class used to read a file of study notes, and provide a convenient way for the study form
+ * to display the notes
  */
 package sdlcstudy;
 
@@ -10,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author justin
+ * @author Justin and Lauren
  */
 public class Study {
 

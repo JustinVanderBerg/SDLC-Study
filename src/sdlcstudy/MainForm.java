@@ -1,13 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Justin VanderBerg and Lauren Thomas
+ * December 4, 2018
+ * This is the main form which allows the user to exit the program, study for the SDLC test or 
+ * take a quiz. Each of these options are accessed by clicking the buttons on the form
  */
 package sdlcstudy;
 
 /**
  *
- * @author justin
+ * @author justin and lauren
  */
 public class MainForm extends javax.swing.JFrame {
 

@@ -1,7 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Justin VanderBerg and Lauren Thomas
+ * December 4, 2018
+ * This is a jFrame that allows the user to take a quiz on the SDLC. It displays the question,
+ * four multiple choice answers the number of questions the user has answered so far, and the number
+ * of correct answers so far. After selecting their answer, the user presses the submit button. The 
+ * JFrame then displays the correct answer if they are wrong, and allows the user to move on to the 
+ * next question
  */
 package sdlcstudy;
 
@@ -10,7 +14,7 @@ import javax.swing.JRadioButton;
 
 /**
  *
- * @author justin
+ * @author justin and lauren
  */
 public class QuizForm extends javax.swing.JFrame {
 

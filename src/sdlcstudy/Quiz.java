@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Justin VanderBerg and Lauren Thomas
+ * December 4, 2018
+ * This is a class that reads in quiz questions and answers (multiple choice) from a txt file, and stores
+ * it in an array. It then provides easy getters and setters for the quiz form to simply display the quiz
  */
 package sdlcstudy;
 
@@ -11,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author justin Added some test comments
+ * @author justin  and lauren
  */
 public class Quiz {
 

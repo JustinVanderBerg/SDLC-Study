@@ -1,13 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Justin VanderBerg and Lauren Thomas
+ * December 4, 2018
+ * This is the form which shows the user their study notes. Using the combo box they can select a topic
+ * and read the notes about that topic. They can also return to the main menu at any point
  */
 package sdlcstudy;
 
 /**
  *
- * @author justin
+ * @author justin and lauren
  */
 public class StudyForm extends javax.swing.JFrame {
 
