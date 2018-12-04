@@ -69,7 +69,6 @@ public class QuizForm extends javax.swing.JFrame {
         lblCorrect = new javax.swing.JLabel();
         lblAnsweredPrompt = new javax.swing.JLabel();
         lblAnswered = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         btnNext = new javax.swing.JButton();
         lblCorrectAnswer = new javax.swing.JLabel();
 
@@ -83,13 +82,17 @@ public class QuizForm extends javax.swing.JFrame {
         });
 
         btnGroupOptions.add(jBtnOption1);
+        jBtnOption1.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         jBtnOption1.setSelected(true);
 
         btnGroupOptions.add(jBtnOption2);
+        jBtnOption2.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
 
         btnGroupOptions.add(jBtnOption3);
+        jBtnOption3.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
 
         btnGroupOptions.add(jBtnOption4);
+        jBtnOption4.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
 
         lblA.setText("A.");
 
@@ -99,6 +102,8 @@ public class QuizForm extends javax.swing.JFrame {
 
         lblD.setText("D.");
 
+        lblQuestion.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+
         btnSubmit.setText("Submit Answer");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,15 +111,17 @@ public class QuizForm extends javax.swing.JFrame {
             }
         });
 
+        lblCorrectPrompt.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
         lblCorrectPrompt.setText("Correct Questions:");
 
+        lblCorrect.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
         lblCorrect.setText("0");
 
+        lblAnsweredPrompt.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
         lblAnsweredPrompt.setText("Answered Questions:");
 
+        lblAnswered.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
         lblAnswered.setText("0");
-
-        jLabel1.setText("Correct Answer:");
 
         btnNext.setText("Next Question");
         btnNext.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +130,8 @@ public class QuizForm extends javax.swing.JFrame {
             }
         });
 
+        lblCorrectAnswer.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -130,12 +139,6 @@ public class QuizForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSubmit)
-                        .addGap(31, 31, 31)
-                        .addComponent(btnNext)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
-                        .addComponent(btnMain))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblB)
@@ -147,37 +150,49 @@ public class QuizForm extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jBtnOption3)
                                     .addComponent(jBtnOption4))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBtnOption1)
-                                    .addComponent(jBtnOption2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblAnsweredPrompt, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblCorrectPrompt, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblAnswered)
-                                    .addComponent(lblCorrect))
-                                .addGap(2, 2, 2))))
+                                .addContainerGap(1044, Short.MAX_VALUE))
+                            .addComponent(jBtnOption1)
+                            .addComponent(jBtnOption2)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblQuestion)
-                            .addComponent(lblA)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblCorrectAnswer)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(lblQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCorrectPrompt)
+                                    .addComponent(lblAnsweredPrompt))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblAnswered)
+                                    .addComponent(lblCorrect)))
+                            .addComponent(lblA)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblCorrectAnswer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnMain, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(lblQuestion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCorrectPrompt)
+                            .addComponent(lblCorrect, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblAnsweredPrompt)
+                            .addComponent(lblAnswered)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(lblQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,21 +208,10 @@ public class QuizForm extends javax.swing.JFrame {
                             .addComponent(lblC))
                         .addGap(21, 21, 21)
                         .addComponent(jBtnOption4))
-                    .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCorrectPrompt)
-                            .addComponent(lblCorrect, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblAnsweredPrompt)
-                            .addComponent(lblAnswered))))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblCorrectAnswer))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblD, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCorrectAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMain)
                     .addComponent(btnSubmit)
@@ -222,14 +226,7 @@ public class QuizForm extends javax.swing.JFrame {
         //hide this form
         this.setVisible(false);
         //reset this form so that on return everything is displayed from the start
-        numCorrect = 0;
-        numAnswered = 0;
-        currentQuestion = 0;
-        lblCorrect.setText("0");
-        lblAnswered.setText("0");
-        lblCorrectAnswer.setText("");
-        btnNext.setEnabled(false);
-        btnSubmit.setEnabled(true);
+        startOver();
         //set the main screen form visible
         mainScreen.setVisible(true);
 
@@ -252,14 +249,21 @@ public class QuizForm extends javax.swing.JFrame {
         if (userChoice == quiz.getCorrectAnswer(currentQuestion)) {
             numCorrect++;
             numAnswered++;
+            lblCorrectAnswer.setText("Correct!");
         } else {
             numAnswered++;
+            //display correct answer if user answered inccorrectly
+            lblCorrectAnswer.setText("Incorrect, the correct answer is: " + quiz.getAnswers(currentQuestion)[quiz.getCorrectAnswer(currentQuestion) - 1]);
         }
 
         //display data for user about the quiz
         lblCorrect.setText("" + numCorrect);
         lblAnswered.setText("" + numAnswered);
-        lblCorrectAnswer.setText(quiz.getAnswers(currentQuestion)[quiz.getCorrectAnswer(currentQuestion) - 1]);
+
+        //disable the answer buttons
+        for (int i = 0; i < 4; i++) {
+            answers[i].setEnabled(false);
+        }
         //enable the next question button and disable the submit button
         btnNext.setEnabled(true);
         btnSubmit.setEnabled(false);
@@ -273,6 +277,10 @@ public class QuizForm extends javax.swing.JFrame {
             btnNext.setEnabled(false);
             lblCorrectAnswer.setText("");
             btnSubmit.setEnabled(true);
+            //disable the answer buttons
+            for (int i = 0; i < 4; i++) {
+                answers[i].setEnabled(true);
+            }
         } else {
             JOptionPane.showMessageDialog(null, "You answered " + numCorrect + " correct out of " + numAnswered + ""
                     + " questions");
@@ -298,6 +306,21 @@ public class QuizForm extends javax.swing.JFrame {
 
     }
 
+    public void startOver() {
+        displayQuestion(0);
+        numCorrect = 0;
+        numAnswered = 0;
+        currentQuestion = 0;
+        lblCorrect.setText("0");
+        lblAnswered.setText("0");
+        lblCorrectAnswer.setText("");
+        btnNext.setEnabled(false);
+        btnSubmit.setEnabled(true);
+        for (int i = 0; i < 4; i++) {
+            answers[i].setEnabled(true);
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupOptions;
     private javax.swing.JButton btnMain;
@@ -307,7 +330,6 @@ public class QuizForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton jBtnOption2;
     private javax.swing.JRadioButton jBtnOption3;
     private javax.swing.JRadioButton jBtnOption4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblA;
     private javax.swing.JLabel lblAnswered;
     private javax.swing.JLabel lblAnsweredPrompt;
