@@ -30,38 +30,34 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lblQuestion" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblB" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblC" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblD" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCorrectPrompt" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAnsweredPrompt" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jBtnOption3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jBtnOption4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="1044" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="jBtnOption1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnOption2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAnswered" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCorrect" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="lblQuestion" min="-2" pref="799" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblCorrectPrompt" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblAnsweredPrompt" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblD" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblAnswered" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCorrect" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnOption3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnOption4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnOption1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnOption2" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="lblA" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -76,7 +72,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="389" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>

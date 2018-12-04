@@ -5,9 +5,7 @@
  */
 package sdlcstudy;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,9 +29,11 @@ public class Study {
      */
     private void readFile() {
         try {
+            //InputStream in = Study.class.getResourceAsStream("Study.txt");
             //number of files read
             int numRead = 0;
             //initialize variables
+            //InputStreamReader fr = new InputStreamReader(in);
             FileReader fr = new FileReader("src//sdlcstudy//Study.txt");
             BufferedReader br = new BufferedReader(fr);
             int numTopics = Integer.parseInt(br.readLine());
